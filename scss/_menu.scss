@@ -1,3 +1,5 @@
+
+//Menu Button
 .menu-btn {
     position: absolute;
     z-index: 3;
@@ -10,7 +12,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($primary-color);
         @include easeOut;
     }
 
@@ -43,7 +45,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    // opacity: 0.9;
     visibility: hidden;
 
     &.show {
@@ -91,6 +93,8 @@
             width: 250px;
             height: 250px;
             background: url('../img/foto.png');
+            background-repeat: no-repeat;
+            background-size: cover;
             border-radius: 50%;
             border: solid 3px $secondary-color;
         }
@@ -105,7 +109,7 @@
             transform: translate3d(0, 0, 0);
         }
 
-        &.current>a {
+        &.current > a {
             color: $secondary-color;
         }
     }
@@ -117,7 +121,7 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
-        color: #fff;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
 

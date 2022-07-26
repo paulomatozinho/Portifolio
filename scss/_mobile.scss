@@ -1,17 +1,27 @@
 //Widescreens 
-@include mediaXl {}
+@include mediaXl {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 //Desktop & Laptops
-@include mediaLg {}
+@include mediaLg {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 //Tablets & Small Laptops
 @include mediaMd {
-    align-items: center;
-    text-align: center;
+    main {
+        align-items: center;
+        text-align: center;
 
-    .lg-heading {
-        line-height: 1;
-        margin-bottom: 1rem;
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
     }
 
     ul.menu-nav,
@@ -26,20 +36,37 @@
     }
 
     .menu-nav {
-        height: 75vh;
+        height: 70vh;
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
     }
 
     .menu-branding {
-        height: 25vh;
-        transform: translate3d(100%,0,0);
+        height: 30vh;
+        transform: translate3d(100%, 0, 0);
 
         .portrait {
-            background: url(../img/foto.png);
+            background: url(../img/fotosmall.png);
+            background-repeat: no-repeat;
+            background-size: cover;
             width: 150px;
             height: 150px;
         }
+    }
+
+    .about-info {
+        grid-template-areas:
+            'bioimage'
+            'bio'
+            'job1'
+            'job2'
+            'job3';
+
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -49,4 +76,7 @@
         margin-top: 10vh;
     }
 
+    .projects {
+        grid-template-columns: 1fr;
+    }
 }
